@@ -1,0 +1,12 @@
+services:
+  image_previewer:
+    container_name: image_previewer
+    build:
+      context: ../
+      dockerfile: build/image_previewer/Dockerfile
+    ports:
+      - "8080:${HTTP_PORT}"
+    restart: unless-stopped
+    environment:
+      HTTP_PORT: ${HTTP_PORT}
+      LRU_CACHE_SIZE: ${LRU_CACHE_SIZE}
