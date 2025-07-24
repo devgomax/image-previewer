@@ -3,7 +3,7 @@ name: Image Previewer Tests
 on:
   push:
     branches:
-      - !main
+      - *
 
 env:
   GO111MODULE: "on"
