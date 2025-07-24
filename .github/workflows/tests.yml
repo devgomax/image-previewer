@@ -19,12 +19,9 @@ jobs:
 
       - name: make lint
         run: make lint
-        working-directory: .
 
       - name: make build
         run: make build
-        working-directory: .}
 
       - name: make test
         run: make test
-        working-directory: .
