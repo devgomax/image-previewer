@@ -1,9 +1,6 @@
 name: Image Previewer Tests
 
-on:
-  push:
-    branches:
-      - !main
+on: push
 
 env:
   GO111MODULE: "on"
