@@ -1,0 +1,24 @@
+services:
+  image_previewer:
+    container_name: image_previewer_test
+    build:
+      context: ../../
+      dockerfile: build/image_previewer/Dockerfile
+    ports:
+      - "8081:${HTTP_PORT}"
+    depends_on:
+      nginx:
+        condition: service_started
+    restart: unless-stopped
+    environment:
+      HTTP_PORT: ${HTTP_PORT}
+      LRU_CACHE_SIZE: ${LRU_CACHE_SIZE}
+
+  nginx:
+    container_name: nginx
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./data:/usr/share/nginx/html
+    restart: unless-stopped
