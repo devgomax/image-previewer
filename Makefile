@@ -19,7 +19,6 @@ lint: install-lint-deps
 	golangci-lint run \
 		--new-from-rev=origin/main \
         --config=.golangci.yml \
-        --sort-results \
         --max-issues-per-linter=1000 \
         --max-same-issues=1000 \
         ./...
