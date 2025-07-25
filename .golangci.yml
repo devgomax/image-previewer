@@ -47,7 +47,6 @@ linters:
     - gocritic
     - gocyclo
     - godot
-    - gofmt
     - gofumpt
     - goheader
     - goprintffuncname
