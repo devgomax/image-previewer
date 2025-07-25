@@ -68,7 +68,6 @@ linters:
     - staticcheck
     - stylecheck
     - thelper
-    - typecheck
     - unconvert
     - unparam
     - unused
