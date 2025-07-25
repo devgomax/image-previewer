@@ -50,7 +50,6 @@ linters:
     - goheader
     - goprintffuncname
     - gosec
-    - gosimple
     - govet
     - importas
     - ineffassign
@@ -63,7 +62,6 @@ linters:
     - predeclared
     - revive
     - staticcheck
-    - stylecheck
     - thelper
     - unconvert
     - unparam
