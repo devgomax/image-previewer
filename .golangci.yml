@@ -42,7 +42,6 @@ linters:
     - errorlint
     - exhaustive
     - funlen
-    - gci
     - gocognit
     - goconst
     - gocritic
