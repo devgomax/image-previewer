@@ -13,10 +13,16 @@ down:
 	docker-compose -f ./deployments/docker-compose.yaml down
 
 install-lint-deps:
-	(which golangci-lint > /dev/null) || curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(shell go env GOPATH)/bin v1.62.2
+	(which golangci-lint > /dev/null) || curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/HEAD/install.sh | sh -s -- -b $(shell go env GOPATH)/bin v2.3.0
 
 lint: install-lint-deps
-	golangci-lint run ./...
+	golangci-lint run \
+		--new-from-rev=origin/main \
+        --config=.golangci.yml \
+        --max-issues-per-linter=1000 \
+        --max-same-issues=1000 \
+        ./...
+
 
 test:
 	go test -race -v ./internal/...

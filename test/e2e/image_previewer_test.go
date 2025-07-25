@@ -133,7 +133,7 @@ func TestNegative(t *testing.T) {
 			name:   "image not found",
 			width:  100,
 			height: 100,
-			imgURL: fmt.Sprintf(imgTemplate, "gopher_1000x1000.jpg"),
+			imgURL: fmt.Sprintf(imgTemplate, "gopher_1000x2000.jpg"),
 			status: http.StatusBadGateway,
 		},
 		{
