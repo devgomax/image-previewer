@@ -3,12 +3,6 @@ run:
   build-tags:
     - bench
     - !bench
-  skip-dirs:
-    - bin
-    - vendor
-    - var
-    - tmp
-    - .cache
 
 linters-settings:
   funlen:
@@ -24,10 +18,17 @@ issues:
         - dupl
         - gocyclo
         - gosec
-    - path: "/go/pkg/mod/"
-      text: ".*"
+    - path: "../../../go/pkg/mod"
       linters:
         - typecheck
+  exclude-dirs:
+    - bin
+    - vendor
+    - var
+    - tmp
+    - .cache
+  exclude:
+    - should have a package comment
 
 linters:
   disable-all: true
