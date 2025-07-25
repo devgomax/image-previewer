@@ -3,7 +3,7 @@ package internalhttp
 import (
 	"net/http"
 
-	"github.com/devgomax/image-previewer/internal/app/image_previewer"
+	imagepreviewer "github.com/devgomax/image-previewer/internal/app/image_previewer"
 	"github.com/go-chi/chi/v5"
 )
 

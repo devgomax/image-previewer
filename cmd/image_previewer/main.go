@@ -7,7 +7,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/devgomax/image-previewer/internal/app/image_previewer"
+	imagepreviewer "github.com/devgomax/image-previewer/internal/app/image_previewer"
 	"github.com/devgomax/image-previewer/internal/config"
 	"github.com/devgomax/image-previewer/internal/logger"
 	"github.com/devgomax/image-previewer/internal/pkg/lru"
